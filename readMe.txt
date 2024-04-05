@@ -1,6 +1,6 @@
 Developers: Conrad Nark, Fed Polyanskiy, Frank Vanris, Trong Duong
 Date Started: 4/4/2024
-Total Hours: 
+Total Hours: 8
 Number of weeks till deadline: 12
 
 SnowPrediction Project:
