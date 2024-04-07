@@ -21,12 +21,12 @@ to other examples of predictions.
 >(3) The KNN algorithm is supposed to identify the nearest neighbors of a given qury point, so that we can assign a class label to that point.<br>
 >(4) If the model does not give well accurate predictions, use NN instead.<br>
 >(5) NN uses a different process which we don't have to get into till we complete KNN.
-<br>
+
 2. Get Data from API then parse Data.<br>
 > use:<br>
 >(1) We will be obtaining Snoqualmie snow fall data from an API then parse through it using techniques within Python.<br>
 >(2) Data can get complex so if needed we can use regex techniques to parse a webpage with data already.<br>
-<br>
+
 3. Make predictions with the data using the Learning models<br>
 >steps:<br>
 >(1) Obtain the features and the label for our data. X is for features and y is for the label. <br>
@@ -34,7 +34,7 @@ to other examples of predictions.
 >(3) Choose the model that we would like to train our data on (in our case KNN).<br>
 >(4) Instantiate the model, then fit the model to the data.<br>
 >(5) Then we predict on the data and obtain the accuracy if needed.<br>
-<br>
+
 4. Project those predictions then compare it with past predicitons.<br>
 >steps:<br>
 >(1) Once obtained the predictions compare it with past predictions.<br>
@@ -42,7 +42,7 @@ to other examples of predictions.
 >(3) use any given visual library to project the data for practicing purposes.<br>
 >(4) If needed use Residual plotting to compare between given predictions<br>
 >(5) (optional) Use lasso or ridge regression to see how accurate the given predictions are to the actual data.<br>
-<br>
+
 5. If good, create user interface for software.<br>
 > steps:<br>
 >(1) Create friendly methods that will allow the user to visually know what is happening.<br>
@@ -50,7 +50,7 @@ to other examples of predictions.
 >(3) Allow the user to easily access the data without to much searching.<br>
 >(4) Allow the user to see past and recent data, with given intervals that we would create.<br>
 >(5) Design of user interface will be our choice so we can freely do what we want here.<br>
-<br>
+
 6. If all progresses good create a weather station for more data.<br>
 > steps:<br>
 >(1) Create a weather station using an arduino/esp32 microcontroller and sensory devices.<br>
