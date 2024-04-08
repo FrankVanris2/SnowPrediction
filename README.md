@@ -18,7 +18,7 @@ to other examples of predictions.
 > steps:<br>
 >(1) In python we will be creating the KNN algorithm for the KNN learning model.<br>
 >(2) Skilearn contains a library, if creating the KNN gets to complex we can use the library.<br>
->(3) The KNN algorithm is supposed to identify the nearest neighbors of a given qury point, so that we can make a prediction on the target feature (snowfall) for that point.<br>
+>(3) The KNN algorithm is supposed to identify the nearest neighbors of a given query point, so that we can make a prediction on the target feature (snowfall) for that point.<br>
 >(4) If the model does not give well accurate predictions, use neural network instead.<br>
 >(5) neural network uses a different process which we don't have to get into till we complete KNN.
 
@@ -36,7 +36,7 @@ to other examples of predictions.
 4. Project those predictions then compare it with past predicitons.<br>
 >steps:<br>
 >(1) If needed tweek the algorithm, see and compare consistently with the data. Decide whether if neural network is needed to project better predictions.<br>
->(2) use any given visual library to project the data for practicing purposes.<br>
+>(2) Use any given visual library to project the data for practicing purposes.<br>
 >(3) If needed use Residual plotting to compare between given predictions<br>
 >(4) Compare best models predictions with commercial predictions for those same data points.<br>
 
@@ -53,6 +53,6 @@ to other examples of predictions.
 >(1) Create a weather station using an arduino/esp32 microcontroller and sensory devices.<br>
 >(2) Obtain Data from the microcontroller and send data through networking protocols.<br>
 >(3) Battery usage can be done in different ways either connecting to a port, or for fun cause why not: SOLAR POWER...please guys.<br>
->(4) send data through packet intel and obtain the data from the api and follow the same steps as before when obtaining the data. Thus giving us (hopefully) better predicitons.
+>(4) Send data through packet intel and obtain the data from the api and follow the same steps as before when obtaining the data. Thus giving us (hopefully) better predicitons.
 
 
