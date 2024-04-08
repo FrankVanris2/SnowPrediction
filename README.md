@@ -18,9 +18,9 @@ to other examples of predictions.
 > steps:<br>
 >(1) In python we will be creating the KNN algorithm for the KNN learning model.<br>
 >(2) Skilearn contains a library, if creating the KNN gets to complex we can use the library.<br>
->(3) The KNN algorithm is supposed to identify the nearest neighbors of a given qury point, so that we can assign a class label to that point.<br>
->(4) If the model does not give well accurate predictions, use NN instead.<br>
->(5) NN uses a different process which we don't have to get into till we complete KNN.
+>(3) The KNN algorithm is supposed to identify the nearest neighbors of a given qury point, so that we can make a prediction on the target feature (snowfall) for that point.<br>
+>(4) If the model does not give well accurate predictions, use neural network instead.<br>
+>(5) neural network uses a different process which we don't have to get into till we complete KNN.
 
 2. Get Data from API then parse Data.<br>
 > use:<br>
@@ -29,19 +29,16 @@ to other examples of predictions.
 
 3. Make predictions with the data using the Learning models<br>
 >steps:<br>
->(1) Obtain the features and the label for our data. X is for features and y is for the label. <br>
+>(1) Determine the most relevant features through data understanding. <br>
 >(2) Split the data to obtain the training and testing sets.<br>
->(3) Choose the model that we would like to train our data on (in our case KNN).<br>
->(4) Instantiate the model, then fit the model to the data.<br>
->(5) Then we predict on the data and obtain the accuracy if needed.<br>
+>(3) Test various values ok K and sets of features to find the model that produces the best predictions.<br>
 
 4. Project those predictions then compare it with past predicitons.<br>
 >steps:<br>
->(1) Once obtained the predictions compare it with past predictions.<br>
->(2) If needed tweek the algorithm, see and compare consistently with the data. Decide whether if NN is needed to project better predictions.<br>
->(3) use any given visual library to project the data for practicing purposes.<br>
->(4) If needed use Residual plotting to compare between given predictions<br>
->(5) (optional) Use lasso or ridge regression to see how accurate the given predictions are to the actual data.<br>
+>(1) If needed tweek the algorithm, see and compare consistently with the data. Decide whether if neural network is needed to project better predictions.<br>
+>(2) use any given visual library to project the data for practicing purposes.<br>
+>(3) If needed use Residual plotting to compare between given predictions<br>
+>(4) Compare best models predictions with commercial predictions for those same data points.<br>
 
 5. If good, create user interface for software.<br>
 > steps:<br>
