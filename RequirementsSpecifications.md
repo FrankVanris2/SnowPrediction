@@ -58,7 +58,20 @@ that you anticipate will use this product. User classes may be differentiated ba
 of product functions used, technical expertise, security or privilege levels, educational level, or experience.
 Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain
 user classes. Distinguish the most important user classes for this product from those who are less important to
-satisfy.>
+satisfy.> <br>
+
+Intended Users: 
+| Who | What | Where | Why | When | How |
+| --- | --- |--- |--- |--- |--- |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+
+
+
+
+
+
 
 **2.3 Design and Implementation Constraints**<br>
 
