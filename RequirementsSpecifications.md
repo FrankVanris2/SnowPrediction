@@ -52,13 +52,10 @@ links:<br><br>
 | National Weather Services | - extensive infrastructure and resources for collecting and analyzing meteorogical data, allowing for more comprehensive snowfall predictions <br> <br>  - established reputation and credibility as a government agency, having public trust in its snowfall predictions <br> <br> - access to advanced modeling techniques and forecasting tools | - broad focus on weather forecasting, which may lead to less specialized snowfall predictions <br> <br> - difficulty in providing highly localized forecasts for specific snowfall events, especially in regions with complex terrain or microclimates | - collaboration with specialized avalanche forecasting services to enhance snowfall prediction accuracy through data and modeling sharing <br> <br> - utilization of advanced satellite imagery, radar technology, and computer modeling to improve short-term snowfall predictions <br> <br> - partnership opportunities with technology companies to develop innovative snowfall prediction tools and applications for public use | - competition from private weather forecasting companies or specialized snowfall prediction services <br> <br> - climate change impacts leading to increased variability and unpredictability in snowfall patterns, challenging accurate prediction efforts|
 
 **2.2 User Classes and Customer Profile**<br>
-
-<5 W's (who, what, where, why, when, and how) about the intended users. Identify the various user classes
-that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset
-of product functions used, technical expertise, security or privilege levels, educational level, or experience.
-Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain
-user classes. Distinguish the most important user classes for this product from those who are less important to
-satisfy.> <br>
+* The who for our user classes include resort skiers/snowboarders, backcountry skiers/snowboarders, snowmobilers, snowshoers, resort employees, as well a snoqualmie resort itself as a potential customer. <br>
+* The when for all of our users would be the day before they intend to partake in a snow sport at snoqualmie pass <br>
+* The how would start as being through a webpage and potentially end up through a moblie app <br>
+* Frequency will vary for users primarily based on the frequency they participate in snow sports <br>
 
 Intended Users: 
 | Who | What | Where | Why | When | How |
@@ -94,7 +91,6 @@ elsewhere (for example, in the vision and scope document or the project plan).>
 **<h1>3. Specific Requirements**</h1><br>
 
 **3.1 User Interfaces**<br>
-
 < Screenshots of feature UI design and descriptions, including why large or small screen. Describe the logical
 characteristics of each interface between the software product and the users. This may include sample screen
 images, any GUI standards or product family style guides that are to be followed, screen layout constraints,
@@ -103,11 +99,7 @@ message display standards, and so on. Define the software components for which a
 Details of the user interface design should be documented in a separate user interface specification.>
 
 **3.2 Functional Requirements**<br>
-
-<This template illustrates organizing the functional requirements for the product by system features, the major
-services provided by the product. You may prefer to organize this section by use case, mode of operation, user
-class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for
-your product.>
+* The functional requirements as they stand for this project includes a website that will display the predicted snowfall for snowualmie pass for the following day <br>
 
 **3.3 Logical Database Requirements**<br>
 < what type of data they project needs to collect and keep track of it. List the main entities and fields you need for each>
