@@ -114,12 +114,14 @@ over ease of learning.>
 
 <How is the app being built? Who's doing the work?
 Collect a numbered list of the project user stories (to be determined) references that remain in the SRS so they
-can be tracked to closure>
+can be tracked to closure> 
 
-User Story                                      Millstone         Assigned to:
-Req. 1: Gathering historical snowfall data       M1                 Frank
-Req. 2: K Nearest Neighbor modeling              M2                 Conrad
-Req. 3: Front End/ UI Design                     M3                 Stefana
+<br>
+
+User Story                                      Millstone         Assigned to: <br>
+Req. 1: Gathering historical snowfall data       M1                 Frank      <br>
+Req. 2: K Nearest Neighbor modeling              M2                 Conrad     <br>
+Req. 3: Front End/ UI Design                     M3                 Stefana    <br>
 
 
 
