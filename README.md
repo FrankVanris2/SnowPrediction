@@ -1,4 +1,4 @@
-Developers: Conrad Nark, Fed Polyanskiy, Frank Vanris, Trong Duong<br>
+Developers: Conrad Nark, Frank Vanris, Stefana Ciustea <br>
 Date Started: 4/4/2024<br>
 Total Hours: 8<br>
 Number of weeks till deadline: 12
