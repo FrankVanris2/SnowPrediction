@@ -45,16 +45,11 @@ links:<br><br>
 
 **<h1>2. Overall Description**</h1><br>
 **2.1 Compete analysis**<br>
-Top competitors : 
-* National avalanche Services.<br>
-*National Weather services.<br><br>
-
-(SWOT “strength, weaknesses, opportunities, threats”)
 
 | Top Competitor | Strengths | Weaknesses | Opportunities | Threats |
 | --- | --- |--- |--- |--- |
-| | | | | |
-| | | | | |
+| National Avalanche Services | - specialized expertise in avalanche prediction, which provides insights into snowfall patterns and potential avalanche risks; - deep understanding of local terrain and weather patterns in avalanche-prone areas, helping in more accurate predictions; - strong relationships with government agencies, ski resorts, and other stakeholders in the industry, having access to relevant data and resources; | - primary focus on avalanche forecasting; | - collaboration with meteorological experts or technology companies to improve snowfall prediction abilities through modeling techniques; - development of partnerships with transportation companies, emergency response agencies, and other stakeholders to improve snowfall prediction accuracy and mitigate risks; | - competition from specialized weather forecasting services or private companies offering advanced snowfall prediction tools; - climate change impacts leading to unpredictable weather patterns and potentially increased snowfall variability, challenging accurate prediction efforts |
+| National Weather Services | | | | |
 | | | | | |
 
 
