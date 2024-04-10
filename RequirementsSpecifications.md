@@ -51,6 +51,14 @@ Top competitors :
 
 (SWOT “strength, weaknesses, opportunities, threats”)
 
+| Top Competitor | Strengths | Weaknesses | Opportunities | Threats |
+| --- | --- |--- |--- |--- |
+| | | | | |
+| | | | | |
+| | | | | |
+
+
+
 **2.2 User Classes and Customer Profile**<br>
 
 <5 W's (who, what, where, why, when, and how) about the intended users. Identify the various user classes
