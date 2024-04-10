@@ -119,6 +119,7 @@ can be tracked to closure>
 <br>
 
 | User Story | Millstone | Assigned to: | <br>
+| --- | --- | --- |
 | Req. 1: Gathering historical snowfall data | M1 | Frank | <br>
 | Req. 2: K Nearest Neighbor modeling | M2  |  Conrad  |     <br>
 | Req. 3: Front End/ UI Design | M3  | Stefana |    <br>
