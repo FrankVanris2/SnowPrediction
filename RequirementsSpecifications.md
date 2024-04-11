@@ -94,6 +94,20 @@ standard buttons, and functions (e.g., help) that will appear on every screen, k
 message display standards, and so on. Define the software components for which a user interface is needed.
 Details of the user interface design should be documented in a separate user interface specification.>
 
+Homepage (Large Screen):
+
+The homepage will feature an image of Snoqualmie Pass covered in snow to set the scene.
+A search bar will be prominently displayed, pre-filled with "Snoqualmie Pass" for convenience.
+A large "Get Forecast" button will stand out, initiating the prediction process specifically for Snoqualmie Pass.
+Weather-related images and icons may accompany the text to enhance visual appeal, possibly featuring local landmarks.
+The layout will be optimized for large screens to accommodate additional details and graphics.
+
+The website will reflect the branding of the service, incorporating its logo, color scheme, and visual identity elements, with specific elements highlighting Snoqualmie Pass.
+Screen layout constraints will ensure a cohesive and visually appealing user experience across devices, with specific optimization for viewing on screens of different sizes.
+
+
+
+
 **3.2 Functional Requirements**<br>
 * The functional requirements as they stand for this project includes a website that will display the predicted snowfall for snowualmie pass for the following day <br>
 
@@ -120,9 +134,10 @@ can be tracked to closure>
 
 | User Story | Millstone | Assigned to: |
 | --- | --- | --- |
-| Req. 1: Gathering historical snowfall data | M1 | Frank | 
-| Req. 2: K Nearest Neighbor modeling | M2  |  Conrad  |   
-| Req. 3: Front End/ UI Design | M3  | Stefana |
+| Req. 1: Requirements Specifications Documentation | M1 | Frank, Conrad, Stefana |
+| Req. 2: Gathering historical snowfall data | M1 | Frank | 
+| Req. 3: K Nearest Neighbor modeling | M2  |  Conrad  |   
+| Req. 4: Front End/ UI Design | M3  | Stefana |
 
 
 
