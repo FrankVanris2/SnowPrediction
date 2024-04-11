@@ -60,15 +60,13 @@ links:<br><br>
 Intended Users: (We need to discuss tomorrow) 
 | Who | What | Where | Why | When | How |
 | --- | --- |--- |--- |--- |--- |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-
-
-
-
-
-
+| resort skiers/snowboarders | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass the next day so they can go enjoy the snow | the day before they intend to partake in a snow sport at Snoqualmie Pass  | accessing our snow predictions through a website link |
+| backcountry skiers/snowboarders | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass the next day so they can go enjoy the snow | the day before they intend to partake in a snow sport at Snoqualmie Pass | accessing our snow predictions through a website link |
+| snowmobilers | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass the next day so they can go enjoy the snow | the day before they intend to partake in a snow sport at Snoqualmie Pass | accessing our snow predictions through a website link |
+| snowshoers | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass the next day so they can go enjoy the snow | the day before they intend to partake in a snow sport at Snoqualmie Pass | accessing our snow predictions through a website link |
+| snowtubers and fans of other sports | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass the next day so they can go enjoy the snow | the day before they intend to partake in a snow sport at Snoqualmie Pass | accessing our snow predictions through a website link |
+| Snoqualmie resort employees | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass the next day so they know ahead of time how busy work will be | the day before they intend to partake in a snow sport at Snoqualmie Pass | accessing our snow predictions through a website link |
+| Snoqualmie resort | checking next day's snowfall prediction for Snoqualmie Pass using our website | Snoqualmie Pass | to check if there will be fresh snow at Snoqualmie Pass to make sure they prepare ahead of time to have enough staff in the next day, and for them to give their customers an accurate prediction so that they build customer trust and sales increase | the day before they intend to partake in a snow sport at Snoqualmie Pass | accessing our snow predictions through a website link |
 
 **2.3 Design and Implementation Constraints**<br>
 
