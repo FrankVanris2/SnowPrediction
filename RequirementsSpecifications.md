@@ -57,7 +57,7 @@ links:<br><br>
 * The how would start as being through a webpage and potentially end up through a moblie app <br>
 * Frequency will vary for users primarily based on the frequency they participate in snow sports <br>
 
-Intended Users: 
+Intended Users: (We need to discuss tomorrow) 
 | Who | What | Where | Why | When | How |
 | --- | --- |--- |--- |--- |--- |
 | | | | | | |
@@ -72,21 +72,19 @@ Intended Users:
 
 **2.3 Design and Implementation Constraints**<br>
 
-<Describe any items or issues that will limit the options available to the developers. These might include
-corporate or regulatory policies; hardware limitations (timing requirements, memory requirements);
-interfaces to other applications; specific technologies, tools, and databases to be used; parallel operations;
-language requirements; communications protocols; security considerations; design conventions or
-programming standards (for example, if the customer’s organization will be responsible for maintaining the
-delivered software).>
+With the given data found online we will only be limited to what we can predict in a given week. Certain outcomes of data can only be purchased, but we do not want to aquire costly data when it should be free in general. Communication between the predictions and the interface will have to be considerable to the users needs. So limiting the information to ONLY the web browser will be in our best interest. Due to time constraints for this project we will not be able to create a mobile app, or project prediction based on which season we are in. <br><br>
+
+Organization will also be a key part into how we will task ourselves in order to make this software on time. However certain tasks could be delayed due to other academic interuptions as well as possible out of school loads that we could face.
+
 
 **2.4 Assumptions and Dependencies**<br>
 
-<List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS.
-These could include third-party or commercial components that you plan to use, issues around the
-development or operating environment, or constraints. The project could be affected if these assumptions are
-incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such
-as software components that you intend to reuse from another project, unless they are already documented
-elsewhere (for example, in the vision and scope document or the project plan).>
+
+As of right now our main goal is to get predictions of snowfall surrounding Snoqualmie pass summit working, and allowing the user to easily access that data with the interface that we will be creating. However, one of our other goals is to try to see if we can obtain better predictions compared to most snow predictions out there, and as well as a possible weather station that we could hand built to retrieve more data for our likings.<br><br>
+
+With these ideas in mind however, if not taken into consideration they could delay the software if these future tasks becomes difficult. Same thing is if we have more time with this software the adaptability to create an app for mobile devices could possibly be in the scope but the challenges around that could again delay the software if the specific task is considered challenging to us developers.<br><br>
+
+We will be using given API's found online that will retrieve required data for our learning model. There could possibly be well documented software similar to our scope that we can look into further. However, such software has not been found yet and as a team we want to do anything in our capability to use anything that could help us when creating this software.
 
 **<h1>3. Specific Requirements**</h1><br>
 
@@ -101,10 +99,7 @@ Details of the user interface design should be documented in a separate user int
 **3.2 Functional Requirements**<br>
 * The functional requirements as they stand for this project includes a website that will display the predicted snowfall for snowualmie pass for the following day <br>
 
-**3.3 Logical Database Requirements**<br>
-< what type of data they project needs to collect and keep track of it. List the main entities and fields you need for each>
-
-**3.4 Performance and Software Quality Requirements**<br>
+**3.3 Performance and Software Quality Requirements**<br>
 <If there are performance requirements for the product under various circumstances, state them here and
 explain their rationale, to help the developers understand the intent and make suitable design choices. Specify
 the timing relationships for real time systems. Make such requirements as specific as possible. You may need
@@ -113,7 +108,9 @@ quality characteristics for the product that will be important to either the cus
 consider are adaptability, availability, correctness, flexibility, interoperability, maintainability, portability,
 reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and
 verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use
-over ease of learning.>
+over ease of learning.><br><br>
+As software developers it is in our best interest to ensure that our product does not cause any mishaps to the user. That includes, unfriendly usage of the software, security faults within our network of our web server, software is not projecting correct data, and slow speed times that the user could face when using the software.<br><br>
+ If speed is not taken into consideration and simplification is not included within the source code for certain aspects such as training and predicting with the machine learning model, then in no doubt our software will face performance issues. 
 
 **<h1>4. Breakdown of work/Project timeline plan**</h1><br>
 
