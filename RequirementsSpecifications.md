@@ -87,12 +87,7 @@ We will be using given API's found online that will retrieve required data for o
 **<h1>3. Specific Requirements**</h1><br>
 
 **3.1 User Interfaces**<br>
-< Screenshots of feature UI design and descriptions, including why large or small screen. Describe the logical
-characteristics of each interface between the software product and the users. This may include sample screen
-images, any GUI standards or product family style guides that are to be followed, screen layout constraints,
-standard buttons, and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error
-message display standards, and so on. Define the software components for which a user interface is needed.
-Details of the user interface design should be documented in a separate user interface specification.>
+![image](SnowFallWebsite.png)
 
 Homepage (Large Screen):
 
@@ -121,10 +116,6 @@ As software developers it is in our best interest to ensure that our product doe
 
 **<h1>4. Breakdown of work/Project timeline plan**</h1><br>
 
-<How is the app being built? Who's doing the work?
-Collect a numbered list of the project user stories (to be determined) references that remain in the SRS so they
-can be tracked to closure> 
-
 <br>
 
 | User Story | Millstone | Assigned to: |
@@ -133,6 +124,12 @@ can be tracked to closure>
 | Req. 2: Gathering historical snowfall data | M1 | Frank | 
 | Req. 3: K Nearest Neighbor modeling | M2  |  Conrad  |   
 | Req. 4: Front End/ UI Design | M3  | Stefana |
+
+<br>
+<h1><b>5. How to run the server </b></h1><br>
+In order to run the server you will need to run with python:<br><br>
+
+* To run server type this command: python3 -m http.server
 
 
 
