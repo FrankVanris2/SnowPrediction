@@ -112,17 +112,12 @@ Screen layout constraints will ensure a cohesive and visually appealing user exp
 * The functional requirements as they stand for this project includes a website that will display the predicted snowfall for snowualmie pass for the following day <br>
 
 **3.3 Performance and Software Quality Requirements**<br>
-<If there are performance requirements for the product under various circumstances, state them here and
-explain their rationale, to help the developers understand the intent and make suitable design choices. Specify
-the timing relationships for real time systems. Make such requirements as specific as possible. You may need
-to state performance requirements for individual functional requirements or features. Specify any additional
-quality characteristics for the product that will be important to either the customers or the developers. Some to
-consider are adaptability, availability, correctness, flexibility, interoperability, maintainability, portability,
-reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and
-verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use
-over ease of learning.><br><br>
+
 As software developers it is in our best interest to ensure that our product does not cause any mishaps to the user. That includes, unfriendly usage of the software, security faults within our network of our web server, software is not projecting correct data, and slow speed times that the user could face when using the software.<br><br>
+
  If speed is not taken into consideration and simplification is not included within the source code for certain aspects such as training and predicting with the machine learning model, then in no doubt our software will face performance issues. 
+
+ One final consideration for this software is to make sure that the predictions are accurate enough for the user so that they can know whether it is going to snow or not on a given day. The accuracy of those predictions should be close enough or above the other snow prediction based models.
 
 **<h1>4. Breakdown of work/Project timeline plan**</h1><br>
 
