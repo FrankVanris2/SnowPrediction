@@ -1,7 +1,7 @@
 Developers: Conrad Nark, Frank Vanris, Stefana Ciustea <br>
 Date Started: 4/4/2024<br>
-Total Hours: 8<br>
-Number of weeks till deadline: 12
+Total Hours: 38<br>
+Number of weeks till deadline: 10
 
 SnowPrediction Project:
 
