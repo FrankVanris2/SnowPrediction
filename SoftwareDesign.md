@@ -77,13 +77,13 @@ Most of the given information that will be used will be stored into DF's half of
 
 <h3> 4.2 Data Dictionary <br> </h3>
 
-<b>Functional Description<b><br><br>
+<b>Functional Description</b><br><br>
 
 <h3> Functionality</h3>
 
 <h4>Snow Prediction System</h4>
 
-**Description**: <br>
+<b>Description</b>: <br>
 The system predicts snowfall using historical data and K-Nearest Neighbors (KNN) algorithm.
 
 <h4>Components</h4>
@@ -116,42 +116,116 @@ Users can:<br>
 - Search for specific information (e.g., by date).
 - Click a button to get snowfall predictions for the next day.
 - View possible snow accumulation amounts.
+<br><br>
+
+<h2> 5. Component Design </h2>
+
+<h3><b>Component: Data Collection</b><br></h3>
+
+* <b>Function: LoadData()</b><br>
+
+<b>Description:</b> Loads historical weather data from a CSV file.<br>
+<b>Input:</b> Path to CSV file.<br>
+<b>Output:</b> Data structure containing the loaded data.<br>
+<b>Local Data:</b> CSV file path, data structure for storing weather data.<br><br>
+
+<h3><b>Component: Prediction Model</b><br></h3>
+
+* <b>Function: TrainModel() </b><br>
+
+  * <b>Description:</b> Trains the KNN model using historical weather data.<br>
+  * <b>Input:</b> Historical weather data structure.<br>
+  * <b>Output:</b> Trained KNN model.<br>
+  * <b>Local Data:</b> KNN model parameters, training dataset.<br>
+
+* <b>Function: PredictSnowfall()</b><br>
+  * <b>Description:</b> Predicts snowfall using the trained KNN model.<br>
+  * <b>Input:</b> Date for prediction, trained KNN model.<br>
+  * <b>Output:</b> Snowfall prediction result.<br>
+  * <b>Local Data:</b> Date, prediction result.<br>
+
+<h3><b>Component: Python Script</b><br></h3>
+
+* <b>Function: GetUserInput()</b>
+
+  * <b>Description:</b> Takes date input from the user.<br>
+  * <b>Input:</b> None.<br>
+  * <b>Output:</b> User-specified date.<br>
+  * <b>Local Data:</b> User input date.<br>
+
+* <b>Function: SendPrediction()</b><br>
+
+  * <b>Description:</b> Sends the snowfall prediction to the React web server.<br>
+  * <b>Input:</b> Snowfall prediction result.<br>
+  * <b>Output:</b> None.<br>
+  * <b>Local Data:</b> Web server endpoint, prediction data.<br>
+
+<h3><b>Component: React Web Server</b><br></h3>
+
+* <b>Function: DisplayData()</b><br>
+
+  * <b>Description:</b> Displays data to the user on the web interface.<br>
+  * <b>Input:</b> Data to be displayed.<br>
+  * <b>Output:</b> None.<br>
+  * <b>Local Data:</b> Data to display.<br>
+
+* <b>Function: SearchData()</b><br>
+  * <b>Description:</b> Provides a search bar for querying specific information.<br>
+  * <b>Input:</b> Search query.<br>
+  * <b>Output:</b> Search results.<br>
+  * <b>Local Data:</b> Search query, search results.<br>
+
+* <b>Function: RetrievePrediction()</b><br>
+
+  * <b>Description:</b> Allows users to click a button to retrieve snowfall predictions.<br>
+  * <b>Input:</b> None.<br>
+  * <b>Output:</b> Snowfall prediction for the next day.<br>
+  * <b>Local Data:</b> Prediction result.<br>
 
 
-<h3>Object-Oriented (OO) Description</h3>
+<h3><b>Component: User Interaction</b><br></h3>
 
-<h3>Objects</h3>
+* <b>Function: SearchInformation()</b><br>
 
-<h3>SnowPredictionSystem</h3>
+  * <b>Description:</b> Enables users to search for specific information by date.<br>
+  * <b>Input:</b> Date query.<br>
+  * <b>Output:</b> Information for the specified date.<br>
+  * <b>Local Data:</b> Date query, search results.<br>
 
-Attributes:
-- `historical_data` (CSV file): Contains historical weather data.
-- `knn_model` (KNN model): Trained model for snowfall prediction.
-- `web_server` (React web server): Handles user interactions.
+* <b>Function: GetNextDayPrediction()</b><br>
 
-<b>Methods<b>:
-- `load_data(file_path: str) -> None`:
-  - **Description**: Loads historical data from the specified CSV file.
-- `train_model() -> None`:
-  - **Description**: Trains the KNN model using historical data.
-- `predict_snowfall(date: str) -> float`:
-  - **Description**: Predicts snowfall for the given date using the KNN model.
-  - **Returns**: Estimated snow accumulation (in inches).
+  * <b>Description:</b> Allows users to get snowfall predictions for the next day.<br>
+  * <b>Input:</b> None.<br>
+  * <b>Output:</b> Snowfall prediction for the next day.<br>
+  * <b>Local Data:</b> Prediction result.<br>
 
-### ReactWebServer
-**Attributes**:
-- `data_display` (React component): Displays data to the user.
-- `search_bar` (React component): Allows users to search for specific information.
-- `prediction_button` (React component): Triggers snowfall predictions.
+* <b>Function: ViewAccumulation()</b><br>
+  * <b>Description:</b> Displays possible snow accumulation amounts to the user.<br>
+  * <b>Input:</b> None.<br>
+  * <b>Output:</b> Snow accumulation data.<br>
+  * <b>Local Data:</b> Accumulation data.<br>
 
-**Methods**:
-- `handle_search(query: str) -> None`:
-  - **Description**: Processes user search queries.
-- `get_snowfall_prediction() -> str`:
-  - **Description**: Retrieves snowfall prediction for the next day.
-  - **Returns**: A message indicating whether it will snow and the estimated accumulation.<br><br>
+<h2> 6. Human Interface Design </h2>
 
-<h1> 5. Component Design </h1>
+<h3> 6.1 Overview of User Interface<br></h3>
+
+When a user opens the site, they will see a screen with a search bar and the logo to the left of it. The main focus for the user will be the central button labeled "Get Forecast." Clicking this button will open a new screen displaying the forecast for the upcoming days in a given week (with a range of 2-3 days for prediction). Each day's forecast will include predictions for whether it will snow or not. An icon on the screen will indicate if snow is expected or if another type of weather event is forecasted. If snow is predicted, the screen will also display information on how much snow is expected to accumulate over a 24-hour period.
+<br><br>
+In the search tab, users can look up information specific to Snoqualmie Pass. All search queries in the search bar will be limited to Snoqualmie Pass. The primary focus of the site is to predict snowfall at the Snoqualmie Pass summit. Users can search for information such as temperature, humidity, and more within the search bar.<br><br>
+
+<h3>6.2 Screen Images<br></h3>
+
+<b>Main Page:</b>
+![image](SnowFallWebsite.png) <br>
+
+<b>Getting Forecast:</b>
+![image](SnowFallWeatherPred.png) <br><br>
+
+<h2> 7. Requirements Tracability Matrix <br> </h2>
+
+
+
+
 
 
 
