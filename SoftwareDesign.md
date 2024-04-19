@@ -43,9 +43,9 @@ Here are the given sources that were used to rely information for this document:
 
 <h2> System Overview<br> </h2>
 
-The goal of this software if to predict reliable data and information on a given day to the user when the user would lik eto know how snowy it could be on a given day. (For our time complexity a given day within 2-3 days ahead or a week).<br><br>
+The goal of this software is to predict reliable data and information on a given day to the user when the user would like to know how snowy it could be on a given day. (For our time complexity a given day within 2-3 days ahead or a week).<br><br>
 
-We will be using A learning model known as KNN to predict on a given day how much snow will fall or whether if it is going to snow at all. We will only be sending the user the average of snow fall for that given day. Not snowfall during certain hourly time intervals. <br><br>
+We will be using a learning model known as KNN to predict on a given day how much snow will fall or whether if it is going to snow at all. We will only be sending the user the average of snow fall for that given day. Not snowfall during certain hourly time intervals. <br><br>
 
 As for where the user will be able to retrieve and see these predictions. They will find it within a website found on the web that we will be creating. A web server that will retrieve the data and our predictions, and present the information to the user. <br><br>
 
