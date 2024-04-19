@@ -222,7 +222,16 @@ In the search tab, users can look up information specific to Snoqualmie Pass. Al
 ![image](SnowFallWeatherPred.png) <br><br>
 
 <h2> 7. Requirements Tracability Matrix <br> </h2>
+Provides a cross reference that traces components and data structures to requirements in our SRS document.
+<br>
+Table shows which system components satisfy each of the functional requirements from the SRS. In order to refer to the functional requirements, we assign them some numbers/codes in the SRS.
 
+| Requirement-ID | Requirement Description | Design Development | Data Design Component | Interface Design Component |
+| --- | --- | --- | --- | --- |
+|  |  |  | | |
+|  |  |  | | |
+|  |  |  | | |  
+|  |  |  | | |
 
 
 
