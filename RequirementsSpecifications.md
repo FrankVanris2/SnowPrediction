@@ -121,9 +121,9 @@ As software developers it is in our best interest to ensure that our product doe
 | User Story | Millstone | Assigned to: |
 | --- | --- | --- |
 | Req. 1: Requirements Specifications Documentation | M1 | Frank, Conrad, Stefana |
-| Req. 2: Gathering historical snowfall data | M1 | Frank | 
-| Req. 3: K Nearest Neighbor modeling | M2  |  Conrad  |   
-| Req. 4: Front End/ UI Design | M3  | Stefana |
+| Req. 2: Gathering historical snowfall data | M2 | Frank | 
+| Req. 3: K Nearest Neighbor modeling | M3  |  Conrad  |   
+| Req. 4: Front End/ UI Design | M4  | Stefana |
 
 <br>
 <h1><b>5. How to run the server </b></h1><br>
