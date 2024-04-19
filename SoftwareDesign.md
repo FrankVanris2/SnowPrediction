@@ -229,7 +229,7 @@ Table shows which system components satisfy each of the functional requirements 
 | Requirement-ID | Requirement Description | Design Development | Data Design Component | Interface Design Component |
 | --- | --- | --- | --- | --- |
 | R1 | The system should be able to load historical weather data from Snoqualmie Pass| Component: Data Collection | LoadData() function| N/A |
-| R2 | The system should train a KNN model using historical weather data from Snoqualmie Pass | Component: Prediction Model | TrainModel() function| N/A |
+| R2 | The system should train a KNN model using historical weather data from Snoqualmie Pass | Component: Prediction Model | TrainModel() function, PredictSnowfall() function| N/A |
 | R3 | The system should provide a web interface for users | N/A | GetUserInput() function, SendPrediction() function, SearchData() function, SearchInformation() function | Component: React Web Server, Component: Python Script |  
 | R4 | The system should display snowfall predictions for the next day when users click the Get Forecast button | N/A | PredictSnowfall() function, DisplayData() function, RetrievePrediction() function, GetNextDayPrediction() function, ViewAccumulation() function | Component: User Interaction |
 
