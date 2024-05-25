@@ -24,8 +24,8 @@ class TestSnowPrediction(unittest.TestCase):
     #UI / Server
     #testing connection to server
     def test_connection_HTTP(self):
-        self.assertEqual(HTTPCon(), 'true')
+        self.assertTrue(HTTPCon())
 
     # testing UI
     def test_UI(self):
-        self.assertEqual(UI_ON(), 'true')
+        self.assertTrue(UI_ON(), 'true')
