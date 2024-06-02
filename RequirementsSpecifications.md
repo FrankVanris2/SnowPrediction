@@ -87,7 +87,7 @@ We will be using given API's found online that will retrieve required data for o
 **<h1>3. Specific Requirements**</h1><br>
 
 **3.1 User Interfaces**<br>
-![image](SnowFallWebsite.png)
+![image](images/SnowFallWebsite.png)
 
 Homepage (Large Screen):
 

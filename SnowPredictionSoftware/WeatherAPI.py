@@ -8,18 +8,19 @@ and parses it through a csv file.
 import urllib.request
 import csv
 
-url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/snoqualmie%20pass?unitGroup=metric&include=current&key=32HQHPU2CHJJAH9EGKQGS82DF&contentType=csv"
+#Grab api data once an hour
+def weatherAPI():
+    url1_current = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/snoqualmie%20pass?unitGroup=metric&include=current&key=32HQHPU2CHJJAH9EGKQGS82DF&contentType=csv"
+    url2_hourly = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/snoqualmie%20pass?unitGroup=metric&include=hours&key=32HQHPU2CHJJAH9EGKQGS82DF&contentType=csv"
 
-try:
-    # Download the CSV file from the URL
-    urllib.request.urlretrieve(url, "snoqualmie_pass_current.csv")
+    try:
+        # Download the CSV file from the URL
+        urllib.request.urlretrieve(url1_current, "RelevantData/snoqualmie_pass_current.csv")
+        urllib.request.urlretrieve(url2_hourly, "RelevantData/snoqualmie_pass_hourly.csv")
 
-    # Now you can read the local CSV file using pandas or any other library
-    # For example, using pandas:
-    import pandas as pd
-    df = pd.read_csv("snoqualmie_pass_current.csv")
-    print(df.head())  # Display the first few rows of the DataFrame
-except urllib.error.HTTPError as e:
-    print(f"HTTP Error: {e.code}")
-except urllib.error.URLError as e:
-    print(f"URL Error: {e.reason}")
+    except urllib.error.HTTPError as e:
+        print(f"HTTP Error: {e.code}")
+    except urllib.error.URLError as e:
+        print(f"URL Erroar: {e.reason}")
+
+

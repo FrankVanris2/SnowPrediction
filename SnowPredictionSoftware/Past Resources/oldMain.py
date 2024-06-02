@@ -27,7 +27,7 @@ def main():
 
     #args for the main we can pass in if we want to obtain the data at any given time
     parser = argparse.ArgumentParser()
-    parser.add_argument("-n", "--Now",  action='store_true',  help="obtaining data now")
+    parser.add_argument("-n", "--Now", help="obtaining data now")
     args = parser.parse_args()
 
     apiRunning(avgD, avgData, args)
@@ -36,6 +36,12 @@ def main():
 
 def datetime_to_float(d):
     return d.timestamp()
+
+def update_avg_data(avgD, avgData, newDataFrame):
+    avgData['mintempF'] = avgD.determineMin(avgData['mintempF'], newDataFrame['mintempF'])
+    avgData['maxtempF'] = avgD.determineMax(avgData['maxtempF'], newDataFrame['maxtempF'])
+    avgData['avgtempF'] = avgD.averagingHourlyTemp(avgData['avgtempF'], newDataFrame['avgtempF'])
+    avgData['totalprecipIn'] = avgD.sumPrecip(avgData['totalprecipIn'], newDataFrame['totalprecipIn'])
 
 def apiRunning(avgD, avgData, args):
     # time interval for weather API
@@ -54,7 +60,7 @@ def apiRunning(avgD, avgData, args):
         current_time = datetime.today()
         print("starting API Time: " + str(current_time))
         # api call
-        #weatherAPI()
+        weatherAPI()
         avgData = obtainingCurrentHourlyData(avgD, avgData)
         thePredictionsofAPI(avgD, avgData)
         # bailout if needed
@@ -71,7 +77,7 @@ def obtainingCurrentHourlyData(avgD, avgData):
     currentData['datetime'] = pd.to_datetime(currentData['datetime'])
     hourlyData['datetime'] = pd.to_datetime(hourlyData['datetime'])
 
-    #setting the hour based on the hour the data is retrieved
+    #changing the hour to the current hour
     avgD.hour = currentData['datetime'].dt.hour
 
     # current time information
@@ -81,15 +87,12 @@ def obtainingCurrentHourlyData(avgD, avgData):
     filteredData = hourlyData[(hourlyData['datetime'].dt.year == currentTime.year) &
                               (hourlyData['datetime'].dt.month == currentTime.month) &
                               (hourlyData['datetime'].dt.day == currentTime.day) &
-                              (hourlyData['datetime'].dt.hour < currentTime.hour)]
+                              (hourlyData['datetime'].dt.hour != currentTime.hour)]
 
     # Create a new DataFrame for hourly data predictions
     updatedHourlyData = hourlyData[hourlyData['datetime'].isin(filteredData['datetime'])]
-    updatedHourlyData = pd.DataFrame(updatedHourlyData)
 
     # hourly data predictions
-    updatedHourlyData = updatedHourlyData._append(currentData, ignore_index=True)
-
     # Creating a new DataFrame with the required structure
     newHourlyDataFrame = pd.DataFrame({
         'mintempF': [np.rint((updatedHourlyData['temp'].min()) * (9 / 5)) + 32],
@@ -98,8 +101,17 @@ def obtainingCurrentHourlyData(avgD, avgData):
         'totalprecipIn': [(updatedHourlyData['precip'].sum()) / 25.4]
     }).round({'totalprecipIn': 1})
 
+    # rounding the numbers
+    print("New Hourly DataFrame: \n" + str(newHourlyDataFrame))
 
+    # currentData predictions
+    newCurrentDataFrame = avgD.makeDF()
+    newCurrentDataFrame['mintempF'] = (currentData['temp'] * (9 / 5)) + 32
+    newCurrentDataFrame['maxtempF'] = (currentData['temp'] * (9 / 5)) + 32
+    newCurrentDataFrame['avgtempF'] = (currentData['temp'] * (9 / 5)) + 32
+    newCurrentDataFrame['totalprecipIn'] = currentData['precip'] / 25.4
 
+    print("New Current Temp: \n" + str(newCurrentDataFrame))
 
     # condition to see if we have the avgDataframe with data or not OR we have reached the end of the day
     if avgData.empty or avgD.getHour() == 23:
@@ -109,10 +121,13 @@ def obtainingCurrentHourlyData(avgD, avgData):
         else:
 
             # inserting current average
-            avgData = newHourlyDataFrame
+            avgData = newCurrentDataFrame
+            update_avg_data(avgD, avgData, newHourlyDataFrame)
+
     else:
         # averaging with current first
-        avgData = newHourlyDataFrame
+        update_avg_data(avgD, avgData, newCurrentDataFrame)
+        update_avg_data(avgD, avgData, newHourlyDataFrame)
 
     return avgData
 

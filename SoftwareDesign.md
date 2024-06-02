@@ -55,7 +55,7 @@ The System itself is going to be a web based application, where all the backend 
 <h3> 3.1 Architectural Design <br> </h3>
 Given architecture in how this will be designed is presented here in this image:<br>
 
-![image](ModuleDesign.png) <br>
+![image](images/ModuleDesign.png) <br>
 
 * Backend Developers:Conrad Nark, Frank Vanris
 * Frontend Developers: Stefana Ciustea
@@ -63,7 +63,7 @@ Given architecture in how this will be designed is presented here in this image:
 <br>
 <h3> 3.2 Decomposition Description <br> </h3>
 
-![image](Decomposition.png) <br>
+![image](images/Decomposition.png) <br>
 
 <h3> 3.3 Design Rationale <br> </h3>
 We chose this architecture because it was easy to visualize it in a streamline scenario. We want to obtain the data then go through predictions then send the information to the user when they use the web server. <br><br>
@@ -216,10 +216,10 @@ In the search tab, users can look up information specific to Snoqualmie Pass. Al
 <h3>6.2 Screen Images<br></h3>
 
 <b>Main Page:</b>
-![image](SnowFallWebsite.png) <br>
+![image](images/SnowFallWebsite.png) <br>
 
 <b>Getting Forecast:</b>
-![image](SnowFallWeatherPred.png) <br><br>
+![image](images/SnowFallWeatherPred.png) <br><br>
 
 <h2> 7. Requirements Tracability Matrix <br> </h2>
 Provides a cross reference that traces components and data structures to requirements in our SRS document.
