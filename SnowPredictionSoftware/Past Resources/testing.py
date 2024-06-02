@@ -8,7 +8,7 @@ import numpy as np
 
 from prediction_code import getPrediction
 
-currentData = pd.read_csv("../RelevantData/snoqualmie_pass_current.csv")
+currentData = pd.read_csv("../RelevantData/Current_Hourly_Data/snoqualmie_pass_current.csv")
 
 specifiedCurrentData = ['datetime', 'temp', 'precip']
 

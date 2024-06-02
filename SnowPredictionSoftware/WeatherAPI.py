@@ -15,8 +15,8 @@ def weatherAPI():
 
     try:
         # Download the CSV file from the URL
-        urllib.request.urlretrieve(url1_current, "RelevantData/snoqualmie_pass_current.csv")
-        urllib.request.urlretrieve(url2_hourly, "RelevantData/snoqualmie_pass_hourly.csv")
+        urllib.request.urlretrieve(url1_current, "RelevantData/Current_Hourly_Data/snoqualmie_pass_current.csv")
+        urllib.request.urlretrieve(url2_hourly, "RelevantData/Current_Hourly_Data/snoqualmie_pass_hourly.csv")
 
     except urllib.error.HTTPError as e:
         print(f"HTTP Error: {e.code}")

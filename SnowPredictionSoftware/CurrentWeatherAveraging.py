@@ -23,10 +23,10 @@ class CurrentHourlyWeatherChange:
         self.hour += 1
 
     def getCurrentDF(self):
-        return pd.read_csv('RelevantData/snoqualmie_pass_current.csv')
+        return pd.read_csv('RelevantData/Current_Hourly_Data/snoqualmie_pass_current.csv')
 
     def getHourlyDF(self):
-        return pd.read_csv('RelevantData/snoqualmie_pass_hourly.csv')
+        return pd.read_csv('RelevantData/Current_Hourly_Data/snoqualmie_pass_hourly.csv')
 
     def averagingCurrentTemp(self, avgHourTemp, newHourTemp):
         hour = self.getHour()
