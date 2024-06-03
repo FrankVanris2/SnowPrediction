@@ -34,9 +34,9 @@ class CurrentHourlyWeatherChange:
         return newAvgTemp
 
     def averagingHourlyTemp(self, avgHourTemp, newHourlyTemp):
-        hour = 2
-        avgHourTemp = (avgHourTemp + newHourlyTemp) / 2
-        return avgHourTemp
+        hour = 23
+        newHourlyTemp = (avgHourTemp * (hour - 1) + newHourlyTemp) / hour
+        return newHourlyTemp
 
     def determineMin(self, minHourTemp, newHourTemp):
         return minHourTemp.combine(newHourTemp, min)
@@ -48,6 +48,9 @@ class CurrentHourlyWeatherChange:
         currentHourPrecip += newHourPrecip
         return currentHourPrecip
 
+    #For future implementation when we want to store predictions and 24hour data into our features and
+    #Target Features.
+    '''
     def storeDaysData(self, df):
         dataForModel = pd.read_csv("dataToBeAddedToModel.csv")
         df['24HourSnow'] = np.nan
@@ -55,6 +58,7 @@ class CurrentHourlyWeatherChange:
 
     #def storeSnow(df):
     #   snowDataForTarget = pd.read_csv("snowpred.csv")
+    '''
 
 
 

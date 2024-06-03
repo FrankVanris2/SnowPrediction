@@ -116,7 +116,7 @@ def obtainingCurrentHourlyData(avgD, avgData):
     # condition to see if we have the avgDataframe with data or not OR we have reached the end of the day
     if avgData.empty or avgD.getHour() == 23:
         if not avgData.empty:
-            avgD.storeDaysData(avgData)
+            #avgD.storeDaysData(avgData)
             avgD = CurrentHourlyWeatherChange()  # Resetting for the new day
         else:
 
