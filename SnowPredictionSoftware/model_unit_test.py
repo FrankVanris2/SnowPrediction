@@ -9,9 +9,9 @@ class ModelTest(unittest.TestCase):
     
     def test_model_accuracy(self):
         #load features
-        featureSet = pd.read_csv('kNNReadyScaledFeatures.csv')
+        featureSet = pd.read_csv('RelevantData/HistoricalRelevantData/kNNReadyScaledFeatures.csv')
         #load target feature
-        target = pd.read_csv('actualFinalizedSnow.csv')
+        target = pd.read_csv('RelevantData/HistoricalRelevantData/actualFinalizedSnow.csv')
         #isolate target feature
         target = target['24HourSnow']
         #initalize useful variables

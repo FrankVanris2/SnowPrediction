@@ -18,7 +18,7 @@ from prediction_code import getPrediction
 
 
 #Unit Testing will occur beyond this line as well as our main method compiling everything.
-todayPrediction = 0
+todayPrediction = 5
 def main():
     avgD = CurrentHourlyWeatherChange()
 
@@ -27,7 +27,7 @@ def main():
 
     #args for the main we can pass in if we want to obtain the data at any given time
     parser = argparse.ArgumentParser()
-    parser.add_argument("-n", "--Now", help="obtaining data now")
+    parser.add_argument("-n", "--Now", action='store_true',  help="obtaining data now")
     args = parser.parse_args()
 
     apiRunning(avgD, avgData, args)
@@ -61,7 +61,7 @@ def apiRunning(avgD, avgData, args):
         print("starting API Time: " + str(current_time))
         # api call
         weatherAPI()
-        avgData = obtainingCurrentHourlyData(avgD, avgData)
+        avgData = obtainingCurrentHourlyData(avgD, avgData, todayPrediction)
         thePredictionsofAPI(avgD, avgData, todayPrediction)
         # bailout if needed
         if args.Now:
@@ -133,17 +133,17 @@ def obtainingCurrentHourlyData(avgD, avgData, todayPrediction):
     return avgData
 
 def get_date():
-    today = date.today()
-    today = today.strftime('%A %b %-d')
-    todayStatment = "Forecast for today " + str(today) + ": "
-    return todayStatment
+    mtoday = date.today()
+    mtoday = mtoday.strftime('%A %b %d')
+    todayStatement = "Forecast for today " + str(mtoday) + ": "
+    return todayStatement
 
 def get_tomorrow_date():
     today = date.today()
-    tomorrow = today + datetime.timedelta(days=1)
-    tomorrow = tomorrow.strftime('%A %b %-d')
-    dateStatment = "Forecast for tomorrow " + str(tomorrow) + ": "
-    return dateStatment
+    tomorrow = today + timedelta(days=1)
+    tomorrow = tomorrow.strftime('%A %b %d')
+    dateStatement = "Forecast for tomorrow " + str(tomorrow) + ": "
+    return dateStatement
 
 def thePredictionsofAPI(avgD, avgData, todayPrediction):
     # create the prediction
