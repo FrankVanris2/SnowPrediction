@@ -1,3 +1,9 @@
+'''
+By: Conrad Nark
+Date: 5/30/2024
+Desc: Unit test for KNN Model to make sure our accuracy is below 2
+'''
+
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor

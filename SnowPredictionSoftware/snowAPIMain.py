@@ -1,5 +1,6 @@
 '''
 Authors: Frank Vanris, Conrad Nark, Stefana Ciustea
+Contributors of Main: Frank Vanris, Conrad Nark
 Date: 4/9/2024
 Desc: This is the main file where everything will project the given information for Snow Prediction.
 '''
