@@ -6,6 +6,7 @@ Desc: This is the main file where everything will project the given information 
 import argparse
 from datetime import datetime, timedelta
 import time
+from datetime import date
 
 import numpy as np
 import pandas as pd
@@ -17,9 +18,8 @@ from prediction_code import getPrediction
 
 
 #Unit Testing will occur beyond this line as well as our main method compiling everything.
-
+todayPrediction = 0
 def main():
-
     avgD = CurrentHourlyWeatherChange()
 
     #my average dataframe
@@ -62,12 +62,12 @@ def apiRunning(avgD, avgData, args):
         # api call
         weatherAPI()
         avgData = obtainingCurrentHourlyData(avgD, avgData)
-        thePredictionsofAPI(avgD, avgData)
+        thePredictionsofAPI(avgD, avgData, todayPrediction)
         # bailout if needed
         if args.Now:
             return
 
-def obtainingCurrentHourlyData(avgD, avgData):
+def obtainingCurrentHourlyData(avgD, avgData, todayPrediction):
     # retrieving and storing data
 
     currentData = avgD.getCurrentDF()
@@ -117,6 +117,7 @@ def obtainingCurrentHourlyData(avgD, avgData):
     if avgData.empty or avgD.getHour() == 23:
         if not avgData.empty:
             #avgD.storeDaysData(avgData)
+            todayPrediction = getPrediction(avgData)
             avgD = CurrentHourlyWeatherChange()  # Resetting for the new day
         else:
 
@@ -131,13 +132,31 @@ def obtainingCurrentHourlyData(avgD, avgData):
 
     return avgData
 
+def get_date():
+    today = date.today()
+    today = today.strftime('%A %b %-d')
+    todayStatment = "Forecast for today " + str(today) + ": "
+    return todayStatment
 
-def thePredictionsofAPI(avgD, avgData):
+def get_tomorrow_date():
+    today = date.today()
+    tomorrow = today + datetime.timedelta(days=1)
+    tomorrow = tomorrow.strftime('%A %b %-d')
+    dateStatment = "Forecast for tomorrow " + str(tomorrow) + ": "
+    return dateStatment
+
+def thePredictionsofAPI(avgD, avgData, todayPrediction):
     # create the prediction
-    prediction = getPrediction(avgData)
+    tomorrowPrediction = getPrediction(avgData)
+    #get date for today
+    today = get_date()
+    todayStatment = today + str(todayPrediction) + " inches"
+    #get date for tomorrow
+    tomorrow = get_tomorrow_date()
+    tomorrowStatment = tomorrow + str(tomorrowPrediction) + " inches"
 
-    print("Averaged Data with hourly and current: \n" + str(avgData))
-    print("snowfall in inches for the 24 hour period is: " + str(prediction) + "in")
+    print(todayStatment)
+    print(tomorrowStatment)
     avgD.iterateHour()
 
 if __name__ == "__main__":

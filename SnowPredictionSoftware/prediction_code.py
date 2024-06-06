@@ -14,7 +14,6 @@ def getFeatures():
 
 def getscaledFeatures():
     df = pd.read_csv("RelevantData/HistoricalRelevantData/kNNReadyScaledFeatures.csv")
-    df = df.drop("index", axis='columns')
     return df
 
 def getTargetFeature():
