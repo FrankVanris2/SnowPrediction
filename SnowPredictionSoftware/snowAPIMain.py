@@ -72,6 +72,8 @@ def apiRunning(avgD, avgData, args):
             # bailout if needed
             if args.Now:
                 return
+    except KeyboardInterrupt:
+        print("Program interrupted by user. Exiting...")
     except Exception as e:
         print(f"An error occurred in apiRunning: {e}")
 
