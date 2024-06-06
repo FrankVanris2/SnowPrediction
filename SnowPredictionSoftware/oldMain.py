@@ -61,13 +61,14 @@ def apiRunning(avgD, avgData, args):
         print("starting API Time: " + str(current_time))
         # api call
         weatherAPI()
-        avgData = obtainingCurrentHourlyData(avgD, avgData, todayPrediction)
-        thePredictionsofAPI(avgD, avgData, todayPrediction)
+        avgData = obtainingCurrentHourlyData(avgD, avgData)
+        thePredictionsofAPI(avgD, avgData)
         # bailout if needed
         if args.Now:
             return
 
-def obtainingCurrentHourlyData(avgD, avgData, todayPrediction):
+def obtainingCurrentHourlyData(avgD, avgData):
+    global todayPrediction
     # retrieving and storing data
 
     currentData = avgD.getCurrentDF()
@@ -78,7 +79,7 @@ def obtainingCurrentHourlyData(avgD, avgData, todayPrediction):
     hourlyData['datetime'] = pd.to_datetime(hourlyData['datetime'])
 
     #changing the hour to the current hour
-    avgD.hour = currentData['datetime'].dt.hour
+    avgD.hour = currentData['datetime'].dt.hour.iloc[0]
 
     # current time information
     currentTime = currentData['datetime'].iloc[0]
@@ -116,7 +117,6 @@ def obtainingCurrentHourlyData(avgD, avgData, todayPrediction):
     # condition to see if we have the avgDataframe with data or not OR we have reached the end of the day
     if avgData.empty or avgD.getHour() == 23:
         if not avgData.empty:
-            #avgD.storeDaysData(avgData)
             todayPrediction = getPrediction(avgData)
             avgD = CurrentHourlyWeatherChange()  # Resetting for the new day
         else:
@@ -145,7 +145,10 @@ def get_tomorrow_date():
     dateStatement = "Forecast for tomorrow " + str(tomorrow) + ": "
     return dateStatement
 
-def thePredictionsofAPI(avgD, avgData, todayPrediction):
+def thePredictionsofAPI(avgD, avgData):
+
+    global todayPrediction
+
     # create the prediction
     tomorrowPrediction = getPrediction(avgData)
     #get date for today
