@@ -1,0 +1,126 @@
+/* src/App.css */
+
+body {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 16px;
+  background-color: #354b9c;
+  background-image: url('https://summitatsnoqualmie.com/assets/Images/Summit/Images/Nights/mountain%20stats/XL-hero-stats.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0px;
+  color: #354b9c;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* -webkit-text-stroke: 1px #136318b0;
+  text-stroke: 1px #136318b0; */
+}
+
+/* .container {
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 9px;
+  background-color: rgba(0, 0, 0, 0.2); /* transparent background */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1; 
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 125px;
+  width: 125px;
+  border-radius: 25px;
+  order: 1;
+  position: absolute;
+  left: 20px;
+}
+
+h2 {
+  color: #000000;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 40px;
+}
+
+.project-title {
+  color: #000000;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 40px;
+  flex: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.weather-forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weather-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 200px;
+}
+
+.weather-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.weather-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  font-size: 18px;
+  color: #666;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -50px; /* adjust the margin to center the button */
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.get-forecast-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background-color: #354b9c;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.get-forecast-button:hover {
+  background-color: #1f2b5a;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3)
+}
