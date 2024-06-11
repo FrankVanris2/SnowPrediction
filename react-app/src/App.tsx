@@ -1,22 +1,31 @@
 // src/App.tsx
+//By: Stefana Ciustea
+//Date: 5/30/24
+//Desc: actual workings of UI design
+// src/App.tsx
 
-import React, { useState, useEffect } from 'react';
+// Stefana Ciustea
+// Gets snowfall prediction for today and tomorrow through the API from the backend
+
+import React, { useState } from 'react';
 import './App.css';
 import logo from './logo.jpg';
-import WeatherCard from './WeatherCard';
+import predictionsData from './predictions.json';
 
 function App() {
-  const [weatherData, setWeatherData] = useState(null);
-  const [showSnowfall, setShowSnowfall] = useState(false);
-
+  const [todaysPrediction, setTodaysPrediction] = useState<number | null>(null);
+  const [tomorrowsPrediction, setTomorrowsPrediction] = useState<number | null>(null);
+  const [todaysDate, setTodaysDate] = useState<string | null>(null);
+  const [tomorrowsDate, setTomorrowsDate] = useState<string | null>(null);
   const handleGetForecast = () => {
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Snoqualmie Pass&units=imperial&appid=YOUR_API_KEY')
-      .then(response => response.json())
-      .then(data => {
-        const tomorrow = data.list[1]; // get tomorrow's weather data
-        setWeatherData(tomorrow);
-        setShowSnowfall(true);
-      });
+    // accesses the predictions
+    const { Todays_Prediction, Tomorrows_Prediction, Todays_Date, Tomorrows_Date } = predictionsData;
+
+    // sets the predictions
+    setTodaysPrediction(Todays_Prediction);
+    setTomorrowsPrediction(Tomorrows_Prediction);
+    setTodaysDate(Todays_Date);
+    setTomorrowsDate(Tomorrows_Date);
   };
 
   return (
@@ -26,22 +35,29 @@ function App() {
         <img src={logo} alt="Logo" className="logo" />
       </div>
       <div className="container">
-        <div className="button-container">
-          <button onClick={handleGetForecast} className="get-forecast-button">Get Forecast</button>
+        <div className="prediction_container">
+          {todaysPrediction !== null && (
+            <div className="prediction">
+              <h4>{todaysDate}</h4>
+              <h3>Today's Prediction: </h3>
+              <p>{todaysPrediction} inches</p>
+            </div>
+          )}
+          {tomorrowsPrediction !== null && (
+            <div className="prediction">
+              <h4>{tomorrowsDate}</h4>
+              <h3>Tomorrow's Prediction: </h3>
+              <p>{tomorrowsPrediction} inches</p>
+            </div>
+          )}
+          <div className="button-container">
+            <button onClick={handleGetForecast} className="get-forecast-button">Get Predictions</button>
+          </div>
         </div>
-        {weatherData && (
-          <WeatherCard
-            date="Today"
-            icon="01d"
-            temp={65}
-            snowfall={2}
-            unit="°F"
-            description="Sunny with a chance of snow"
-          />
-        )}
       </div>
     </div>
   );
 }
 
 export default App;
+

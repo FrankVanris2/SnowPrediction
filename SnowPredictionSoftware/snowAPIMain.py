@@ -5,6 +5,7 @@ Date: 4/9/2024
 Desc: This is the main file where everything will project the given information for Snow Prediction.
 '''
 import argparse
+import json
 from datetime import datetime, timedelta
 import time
 from datetime import date
@@ -148,7 +149,7 @@ def get_date():
     try:
         mtoday = date.today()
         mtoday = mtoday.strftime('%A %b %d')
-        todayStatement = "Forecast for today " + str(mtoday) + ": "
+        todayStatement = str(mtoday)
         return todayStatement
     except Exception as e:
         print(f"an error occurred in get_date: {e}")
@@ -158,7 +159,7 @@ def get_tomorrow_date():
         today = date.today()
         tomorrow = today + timedelta(days=1)
         tomorrow = tomorrow.strftime('%A %b %d')
-        dateStatement = "Forecast for tomorrow " + str(tomorrow) + ": "
+        dateStatement = str(tomorrow)
         return dateStatement
     except Exception as e:
         print(f"an error occurred in get_tomorrow_date: {e}")
@@ -169,6 +170,7 @@ def thePredictionsofAPI(avgD, avgData):
     # create the prediction
     try:
         tomorrowPrediction = getPrediction(avgData)
+        tomorrowPrediction = tomorrowPrediction[0]
         #get date for today
         today = get_date()
         todayStatment = today + str(todayPrediction) + " inches"
@@ -176,11 +178,25 @@ def thePredictionsofAPI(avgD, avgData):
         tomorrow = get_tomorrow_date()
         tomorrowStatment = tomorrow + str(tomorrowPrediction) + " inches"
 
+        #putting predictions in json file for UI
+        toJson(todayPrediction, tomorrowPrediction, today, tomorrow)
+
         print(todayStatment)
         print(tomorrowStatment)
         avgD.iterateHour()
     except Exception as e:
         print(f"An error occurred in thePredictionsofAPI: {e}")
+
+#converting the predictions to a json file for the UI
+def toJson(todayPrediction, tomorrowPrediction, todayDate, tomorrowDate):
+    with open("../react-app/src/predictions.json", mode="w") as file:
+        data = {
+            "Todays_Prediction": todayPrediction,
+            "Tomorrows_Prediction": tomorrowPrediction,
+            "Todays_Date": todayDate,
+            "Tomorrows_Date": tomorrowDate
+         }
+        json.dump(data, file)
 
 if __name__ == "__main__":
     main()

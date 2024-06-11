@@ -15,3 +15,8 @@ def getIndexHtml():
 def getMainMinJs():
     with open('./dist/main.min.js') as file:
         return file.read()
+
+@app.get("/api/prediction")
+def getPrediction():
+    with open('./SnowPredictionSoftware/ImportantJson/predictions.json') as file:
+        return file.read()
