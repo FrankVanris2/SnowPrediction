@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/css/main.3ea1ce88.css",
+    "main.js": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/js/main.43cff55c.js",
+    "static/js/453.bcede05f.chunk.js": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/js/453.bcede05f.chunk.js",
+    "static/media/logo.jpg": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/media/logo.eb89d453a98b27741cc6.jpg",
+    "index.html": "/FrankVanris2/SnowPrediction/tree/main/react-app/index.html",
+    "main.3ea1ce88.css.map": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/css/main.3ea1ce88.css.map",
+    "main.43cff55c.js.map": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/js/main.43cff55c.js.map",
+    "453.bcede05f.chunk.js.map": "/FrankVanris2/SnowPrediction/tree/main/react-app/static/js/453.bcede05f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ea1ce88.css",
+    "static/js/main.43cff55c.js"
+  ]
+}
