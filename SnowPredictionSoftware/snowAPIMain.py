@@ -149,7 +149,7 @@ def get_date():
     try:
         mtoday = date.today()
         mtoday = mtoday.strftime('%A %b %d')
-        todayStatement = str(mtoday)
+        todayStatement = "Todays, " + str(mtoday) + " Prediction:"
         return todayStatement
     except Exception as e:
         print(f"an error occurred in get_date: {e}")
@@ -159,7 +159,7 @@ def get_tomorrow_date():
         today = date.today()
         tomorrow = today + timedelta(days=1)
         tomorrow = tomorrow.strftime('%A %b %d')
-        dateStatement = str(tomorrow)
+        dateStatement = "Tomorrows, " + str(tomorrow) + " Prediction:"
         return dateStatement
     except Exception as e:
         print(f"an error occurred in get_tomorrow_date: {e}")

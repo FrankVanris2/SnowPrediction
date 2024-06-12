@@ -39,14 +39,12 @@ function App() {
           {todaysPrediction !== null && (
             <div className="prediction">
               <h4>{todaysDate}</h4>
-              <h3>Today's Prediction: </h3>
               <p>{todaysPrediction} inches</p>
             </div>
           )}
           {tomorrowsPrediction !== null && (
             <div className="prediction">
               <h4>{tomorrowsDate}</h4>
-              <h3>Tomorrow's Prediction: </h3>
               <p>{tomorrowsPrediction} inches</p>
             </div>
           )}

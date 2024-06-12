@@ -1,9 +1,6 @@
 # Installation
 
-Install Flask:
-```
-pip install Flask
-```
+
 
 If not have install npm by installing node.js:
 ```
@@ -22,9 +19,9 @@ Build the client:
 npm run build
 ```
 
-# Run server
+# Run server on local machine
 ```
-python -m flask --app server run
+npm run start 
 ```
 
 # Client development

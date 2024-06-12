@@ -133,6 +133,7 @@ h2 {
 
 }
 .prediction {
+  display: inline-block;
   flex: 1;
   background-color: #354b9c;
   padding: 10px;
@@ -141,6 +142,7 @@ h2 {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  vertical-align: middle;
 }
 
 .prediction h3 {
