@@ -1,7 +1,7 @@
 '''
 By: Conrad Nark
 Date: 5/05/2024
-Desc: This uses the KNN learning model to create predictions of snowfall data within a 24 hour period.
+Desc: This uses the KNN learning model to create predictions of snowfall testData within a 24 hour period.
 '''
 
 from sklearn.neighbors import KNeighborsRegressor
@@ -32,7 +32,7 @@ def getPrediction(todaysWeather):
     targetColumn = targetFeatures['24HourSnow']
     #scalar object
     scalar = MinMaxScaler()
-    #scale query data point
+    #scale query testData point
     todaysWeatherScaled = scalar.fit_transform(features)
     #return to DF with correct column names
     todaysWeatherScaled = pd.DataFrame(todaysWeatherScaled,columns=features.columns)

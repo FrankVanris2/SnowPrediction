@@ -1,7 +1,7 @@
 '''
 By: Frank Vanris
 Date: 5/26/2024
-Desc: Obtaining the current data based on the hours and averaging them with the given data
+Desc: Obtaining the current testData based on the hours and averaging them with the given testData
 '''
 
 import pandas as pd
@@ -48,7 +48,7 @@ class CurrentHourlyWeatherChange:
         currentHourPrecip += newHourPrecip
         return currentHourPrecip
 
-    #For future implementation when we want to store predictions and 24hour data into our features and
+    #For future implementation when we want to store predictions and 24hour testData into our features and
     #Target Features.
     '''
     def storeDaysData(self, df):

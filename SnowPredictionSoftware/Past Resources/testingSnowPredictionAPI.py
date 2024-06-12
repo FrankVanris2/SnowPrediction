@@ -1,7 +1,7 @@
 '''
 By: Frank Vanris
 Date: 5/27/2024
-Desc: This testing environment was meant to learn how to obtain past and current data and combine them with
+Desc: This testing environment was meant to learn how to obtain past and current testData and combine them with
 averaging in order to obtain a prediciton
 '''
 
@@ -21,7 +21,7 @@ avgData = avgD.makeDF()
 #api call
 weatherAPI()
 
-# retrieving and storing data
+# retrieving and storing testData
 
 currentData = pd.read_csv("TestingFiles/january13Current.csv")
 
@@ -38,20 +38,20 @@ currentTime = currentData['datetime'].iloc[0]
 
 print("currentTime Data: \n" + str(currentTime))
 
-#filter data between dates
+#filter testData between dates
 filteredData = hourlyData[(hourlyData['datetime'].dt.year == currentTime.year) &
                           (hourlyData['datetime'].dt.month == currentTime.month) &
                           (hourlyData['datetime'].dt.day == currentTime.day) &
                           (hourlyData['datetime'].dt.hour < currentTime.hour)]
 
 
-#Create a new DataFrame for hourly data predictions
+#Create a new DataFrame for hourly testData predictions
 updatedHourlyData = hourlyData[hourlyData['datetime'].isin(filteredData['datetime'])]
 updatedHourlyData = pd.DataFrame(updatedHourlyData)
 
 updatedHourlyData = updatedHourlyData._append(currentData, ignore_index=True)
 
-#hourly data predictions
+#hourly testData predictions
 # Creating a new DataFrame with the required structure
 newHourlyDataFrame = pd.DataFrame({
     'mintempF': [np.rint((updatedHourlyData['temp'].min()) * (9/5)) + 32],
@@ -60,13 +60,13 @@ newHourlyDataFrame = pd.DataFrame({
     'totalprecipIn': [(updatedHourlyData['precip'].sum()) / 25.4]
 }).round({'totalprecipIn': 1})
 
-print("update hourly data: \n" + str(updatedHourlyData['datetime']) + ", " + str(updatedHourlyData['temp']))
+print("update hourly testData: \n" + str(updatedHourlyData['datetime']) + ", " + str(updatedHourlyData['temp']))
 #rounding the numbers
 print("New Hourly DataFrame: \n" + str(newHourlyDataFrame))
 
 
 
-#condition to see if we have the avgDataframe with data or not OR we have reached the end of the day
+#condition to see if we have the avgDataframe with testData or not OR we have reached the end of the day
 if avgData.empty or avgD.getHour() == 23:
     if not avgData.empty:
         avgD.storeDaysData(avgData)

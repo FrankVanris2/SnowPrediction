@@ -28,9 +28,9 @@ def main():
         #my average dataframe
         avgData = avgD.makeDF()
 
-        #args for the main we can pass in if we want to obtain the data at any given time
+        #args for the main we can pass in if we want to obtain the testData at any given time
         parser = argparse.ArgumentParser()
-        parser.add_argument("-n", "--Now", action='store_true',  help="obtaining data now")
+        parser.add_argument("-n", "--Now", action='store_true',  help="obtaining testData now")
         args = parser.parse_args()
 
         apiRunning(avgD, avgData, args)
@@ -56,7 +56,7 @@ def apiRunning(avgD, avgData, args):
                 current_time = datetime.today()
                 time_until_next_hour = 3600 - current_time.minute * 60 - current_time.second
                 print("current time: " + str(current_time))
-                print("waiting till program reaches an hour for data retrieval...")
+                print("waiting till program reaches an hour for testData retrieval...")
 
                 retrievalTime = current_time + timedelta(seconds=time_until_next_hour)
                 print("retrieval time: " + str(retrievalTime))
@@ -81,7 +81,7 @@ def apiRunning(avgD, avgData, args):
 
 def obtainingCurrentHourlyData(avgD, avgData):
     global todayPrediction
-    # retrieving and storing data
+    # retrieving and storing testData
     try:
         currentData = avgD.getCurrentDF()
         hourlyData = avgD.getHourlyDF()
@@ -96,16 +96,16 @@ def obtainingCurrentHourlyData(avgD, avgData):
         # current time information
         currentTime = currentData['datetime'].iloc[0]
 
-        # filter data between dates
+        # filter testData between dates
         filteredData = hourlyData[(hourlyData['datetime'].dt.year == currentTime.year) &
                                   (hourlyData['datetime'].dt.month == currentTime.month) &
                                   (hourlyData['datetime'].dt.day == currentTime.day) &
                                   (hourlyData['datetime'].dt.hour != currentTime.hour)]
 
-        # Create a new DataFrame for hourly data predictions
+        # Create a new DataFrame for hourly testData predictions
         updatedHourlyData = hourlyData[hourlyData['datetime'].isin(filteredData['datetime'])]
 
-        # hourly data predictions
+        # hourly testData predictions
         # Creating a new DataFrame with the required structure
         newHourlyDataFrame = pd.DataFrame({
             'mintempF': [np.rint((updatedHourlyData['temp'].min()) * (9 / 5)) + 32],
@@ -126,7 +126,7 @@ def obtainingCurrentHourlyData(avgD, avgData):
 
         print("New Current Temp: \n" + str(newCurrentDataFrame))
 
-        # condition to see if we have the avgDataframe with data or not OR we have reached the end of the day
+        # condition to see if we have the avgDataframe with testData or not OR we have reached the end of the day
         if avgData.empty or avgD.getHour() == 23:
             if not avgData.empty:
                 todayPrediction = getPrediction(avgData)

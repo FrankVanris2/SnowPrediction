@@ -23,7 +23,7 @@ class ModelTest(unittest.TestCase):
         #initalize useful variables
         meanAbsoluteError = 0
         numTests = 1000
-        #run numTests tests for k=23 on numTests different test train splits using 90% of data for model training and
+        #run numTests tests for k=23 on numTests different test train splits using 90% of testData for model training and
         #10% for testing. 
         for i in range(numTests):
             featuresTrain, featuresTest, targetTrain, targetTest = train_test_split(featureSet,target,test_size=.1)

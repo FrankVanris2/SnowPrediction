@@ -1,7 +1,7 @@
 '''
 By: Frank Vanris
 Date: 6/2/2024
-Desc: For testing purposes in creating predictions out of current data
+Desc: For testing purposes in creating predictions out of current testData
 '''
 import pandas as pd
 import numpy as np
