@@ -9,7 +9,7 @@
 
 import React, { useState } from 'react';
 import './App.css';
-import logo from './logo.JPG';
+import logo from './logo.jpg';
 import predictionsData from './predictions.json';
 
 function App() {
