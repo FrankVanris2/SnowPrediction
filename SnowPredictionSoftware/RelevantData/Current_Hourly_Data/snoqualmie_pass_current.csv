@@ -1,2 +1,2 @@
 name,datetime,temp,feelslike,dew,humidity,precip,precipprob,preciptype,snow,snowdepth,windgust,windspeed,winddir,sealevelpressure,cloudcover,visibility,solarradiation,solarenergy,uvindex,severerisk,conditions,icon,stations
-"Snoqualmie Pass, WA, United States",2024-06-11T20:30:00,10.8,10.8,3.2,59.3,0,0,,0,0,17.3,7.9,108,1019,88,2,60,0.2,1,,Partially cloudy,partly-cloudy-day,"F6102,KSMP,TALPE,TFRAN"
+"Snoqualmie Pass, WA, United States",2024-06-11T21:28:00,9.6,8.2,2.8,62.4,0,0,,0,0,22.5,9.8,96,1019,100,2,12,0,0,,Overcast,cloudy,"KSMP,TALPE,TDENN,TFRAN"

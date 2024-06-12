@@ -20,7 +20,7 @@ name,datetime,temp,feelslike,dew,humidity,precip,precipprob,preciptype,snow,snow
 "Snoqualmie Pass, WA, United States",2024-06-11T18:00:00,11.7,11.7,4.4,60.7,0,0,,0,0,37.1,13.8,262,1020.1,82.2,16,196,0.7,2,10,Partially cloudy,partly-cloudy-day,"KSEA,KSMP,KBFI,FTAW1,KRNT"
 "Snoqualmie Pass, WA, United States",2024-06-11T19:00:00,17,17,6.7,50.93,0,0,,0,0,32.6,14.8,226,1020.8,15.8,16,138,0.5,1,10,Clear,clear-day,"KSEA,KBFI,FTAW1,KRNT"
 "Snoqualmie Pass, WA, United States",2024-06-11T20:00:00,9.5,7.8,4.2,69.76,0,0,,0,0,29.5,11.3,252,1019.5,80.6,16,60,0.2,1,10,Partially cloudy,partly-cloudy-day,"KSEA,KSMP,KBFI,FTAW1,KRNT"
-"Snoqualmie Pass, WA, United States",2024-06-11T21:00:00,7.3,4.3,3.4,76.27,0,8,,0,0,38.9,16.6,300,1018,62,16.2,42,0.2,0,10,Partially cloudy,partly-cloudy-day,
+"Snoqualmie Pass, WA, United States",2024-06-11T21:00:00,8.4,6.6,4.4,75.86,0,0,,0,0,38.9,10.8,277,1019.5,94.4,15.8,12,0,0,10,Overcast,cloudy,"KSEA,KSMP,KBFI,FTAW1,KRNT"
 "Snoqualmie Pass, WA, United States",2024-06-11T22:00:00,7.3,4.3,4.5,82.4,0,8,,0,0,38.9,16.6,300,1019,62,16.2,33,0.1,0,10,Partially cloudy,partly-cloudy-night,
 "Snoqualmie Pass, WA, United States",2024-06-11T23:00:00,6.7,4.8,4.5,85.86,0.3,4,rain,0,0,27.7,9.4,310,1018,65,16.2,28,0.1,0,10,Partially cloudy,partly-cloudy-night,
 "Snoqualmie Pass, WA, United States",2024-06-12T00:00:00,6.2,4.2,3.9,85.2,0,4,,0,0,27.7,9.4,310,1018,65,16.2,0,0,0,10,Partially cloudy,partly-cloudy-night,
