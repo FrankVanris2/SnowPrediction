@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/SnowPrediction/static/css/main.85c0b331.css",
-    "main.js": "/SnowPrediction/static/js/main.82738173.js",
+    "main.js": "/SnowPrediction/static/js/main.b60d1cb3.js",
     "static/js/453.bcede05f.chunk.js": "/SnowPrediction/static/js/453.bcede05f.chunk.js",
     "static/media/logo.jpg": "/SnowPrediction/static/media/logo.eb89d453a98b27741cc6.jpg",
     "index.html": "/SnowPrediction/index.html",
     "main.85c0b331.css.map": "/SnowPrediction/static/css/main.85c0b331.css.map",
-    "main.82738173.js.map": "/SnowPrediction/static/js/main.82738173.js.map",
+    "main.b60d1cb3.js.map": "/SnowPrediction/static/js/main.b60d1cb3.js.map",
     "453.bcede05f.chunk.js.map": "/SnowPrediction/static/js/453.bcede05f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85c0b331.css",
-    "static/js/main.82738173.js"
+    "static/js/main.b60d1cb3.js"
   ]
 }
