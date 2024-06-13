@@ -20,11 +20,6 @@ body {
   text-stroke: 1px #136318b0; */
 }
 
-/* .container {
-  max-width: 800px;
-  margin: 0 auto;
-} */
-
 .banner {
   position: absolute;
   top: 0;
@@ -61,38 +56,6 @@ h2 {
   flex: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-.weather-forecast {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.weather-card {
-  background-color: #fff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 200px;
-}
-
-.weather-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.weather-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.weather-card p {
-  font-size: 18px;
-  color: #666;
-}
-
 
 .container {
   display: flex;
