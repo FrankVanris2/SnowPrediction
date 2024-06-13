@@ -1,10 +1,7 @@
 // src/App.tsx
-//By: Stefana Ciustea
-//Date: 5/30/24
-//Desc: actual workings of UI design
-// src/App.tsx
-
 // Stefana Ciustea
+// 5/30/24
+// actual workings of UI design
 // Gets snowfall prediction for today and tomorrow through the API from the backend
 
 import React, { useState } from 'react';
