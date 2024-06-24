@@ -20,7 +20,7 @@ from prediction_code import getPrediction
 
 
 #Unit Testing will occur beyond this line as well as our main method compiling everything.
-todayPrediction = 5
+todayPrediction = 0
 def main():
     try:
         avgD = CurrentHourlyWeatherChange()
